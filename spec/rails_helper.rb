@@ -25,11 +25,11 @@ end
 
 def stub_store
   {
-      "longName": "BEST BUY MOBILE - CHERRY CREEK SHOPPING CENTER",
-      "city": "DENVER",
-      "distance": 3.45,
-      "phone": "303-270-9189",
-      "storeType": "Mobile SAS"
+      longName: "BEST BUY MOBILE - CHERRY CREEK SHOPPING CENTER",
+      city: "DENVER",
+      distance: 3.45,
+      phone: "303-270-9189",
+      storeType: "Mobile SAS"
     }
 end
 # Requires supporting ruby files with custom matchers and macros, etc, in
