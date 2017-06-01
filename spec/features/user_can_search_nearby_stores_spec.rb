@@ -10,8 +10,10 @@ describe "user can search stores" do
 
       expect(current_path).to eq(search_path)
       expect(page).to have_content("16 Total Stores")
+      expect(page).to have_css(".stores", :count => 10)
       expect(page).to have_content("BEST BUY MOBILE - CHERRY CREEK SHOPPING CENTER")
       expect(page).to have_content("BEST BUY - SOUTHGLENN")
+      expect(page).to have_link("2")
     end
   end
 end
