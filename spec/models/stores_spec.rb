@@ -19,7 +19,7 @@ describe 'stores' do
 
       expect(stores).to be_an(Array)
       expect(stores.first).to be_a(Store)
-      expect(stores.count).to eq(16)
+      expect(stores.count).to eq(10)
     end
   end
 end

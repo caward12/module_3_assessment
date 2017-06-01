@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    @stores = Store.stores(params[:q]).paginate(:page => params[:page], :per_page =>10)
+    @stores = Store.stores(params[:q])
 
   end
 end

@@ -8,7 +8,7 @@ describe 'bestbuy service' do
 
       stores = BestbuyService.new(zip).nearby_stores
       expect(stores[:stores].first).to be_a(Hash)
-      expect(stores[:stores].count).to eq(16)
+      expect(stores[:stores].count).to eq(10)
       expect(stores[:stores].first).to have_key(:longName)
       expect(stores[:stores].first).to have_key(:city)
       expect(stores[:stores].first).to have_key(:distance)
