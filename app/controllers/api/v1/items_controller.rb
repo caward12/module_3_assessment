@@ -1,5 +1,5 @@
 class Api::V1::ItemsController < ApplicationController
-
+   skip_before_action :verify_authenticity_token
   def index
     render json: Item.all, :status => 200
   end
@@ -9,11 +9,12 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def create
-    item = Item.create(item_params)
+    render json: Item.create(item_params), :status => 201
   end
 
   def destroy
-
+    item = Item.find(params[:id])
+    render json: item.destroy, :status => 204
   end
 
   private
