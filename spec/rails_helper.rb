@@ -20,7 +20,17 @@ end
 VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"
   config.hook_into :webmock
-  config.filter_sensitive_data('<>') { ENV[''] }
+  config.filter_sensitive_data('<BEST_BUY_KEY>') { ENV['BEST_BUY_KEY'] }
+end
+
+def stub_store
+  {
+      "longName": "BEST BUY MOBILE - CHERRY CREEK SHOPPING CENTER",
+      "city": "DENVER",
+      "distance": 3.45,
+      "phone": "303-270-9189",
+      "storeType": "Mobile SAS"
+    }
 end
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
