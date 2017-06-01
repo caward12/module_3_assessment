@@ -1,11 +1,13 @@
 <%= @stores.last %> Total Stores <br>
 
-<ul class="stores">
+<ul>
 <% @stores[0..-2].each do |store| %>
+<div class="stores">
   <strong><%= store.name %></strong>
   <li> City: <%= store.city %></li>
   <li> Distance: <%= store.distance%> miles</li>
   <li> Phone: <%= store.phone %></li>
   <li> Store Type: <%= store.store_type %></li><br>
+</div>
 <% end %>
 </ul>
