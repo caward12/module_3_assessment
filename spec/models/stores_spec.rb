@@ -22,4 +22,15 @@ describe 'stores' do
       expect(stores.count).to eq(10)
     end
   end
+
+  it "can find list of nearby stores and total count of stores" do
+    VCR.use_cassette("nearby_store_count") do
+      zip = "80202"
+      stores = Store.stores(zip)
+
+      expect(stores).to be_an(Array)
+      expect(stores.first).to be_a(Store)
+      expect(stores.last).to eq(16)
+    end
+  end
 end
