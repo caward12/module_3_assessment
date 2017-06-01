@@ -1,0 +1,9 @@
+<% @stores.each do |store| %>
+<ul>
+  <li> <strong><%= store.name %></strong></li>
+  <li> City: <%= store.city %></li>
+  <li> Distance: <%= store.distance%> miles</li>
+  <li> Phone: <%= store.phone %></li>
+  <li> Store Type: <%= store.store_type %></li>
+</ul>
+<% end %>

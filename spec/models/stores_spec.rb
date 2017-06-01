@@ -15,7 +15,6 @@ describe 'stores' do
   it "can find list of nearby stores" do
     VCR.use_cassette("nearby_stores") do
       zip = "80202"
-
       stores = Store.nearby_stores(zip)
 
       expect(stores).to be_an(Array)

@@ -10,6 +10,7 @@ class Store
     @store_type = data[:storeType]
   end
 
+
   def self.nearby_stores(zip)
     BestbuyService.new(zip).nearby_stores.map do |data|
       new(data)

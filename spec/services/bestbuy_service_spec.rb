@@ -7,7 +7,6 @@ describe 'bestbuy service' do
       zip = "80202"
 
       stores = BestbuyService.new(zip).nearby_stores
-      byebug
       expect(stores).to be_an(Array)
       expect(stores.first).to be_a(Hash)
       expect(stores.count).to eq(10)
