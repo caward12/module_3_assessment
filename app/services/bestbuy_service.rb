@@ -7,7 +7,7 @@ class BestbuyService
   end
 
   def nearby_stores
-    parser(@connection.get("/v1/stores(area(#{@zip},25))?format=json&show=longName,city,distance,phone,storeType&pageSize=10", @key))
+    parser(@connection.get("/v1/stores(area(#{@zip},25))?format=json&show=longName,city,distance,phone,storeType&pageSize=100", @key))
   end
 
   private

@@ -7,6 +7,7 @@ describe "user can search stores" do
 
       fill_in "q", with: "80202"
       click_on "Search"
+      
 
       expect(current_path).to eq(search_path)
       expect(page).to have_content("16 Total Stores")
