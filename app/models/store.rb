@@ -12,8 +12,13 @@ class Store
 
 
   def self.nearby_stores(zip)
-    BestbuyService.new(zip).nearby_stores.map do |data|
+    BestbuyService.new(zip).nearby_stores[:stores].map do |data|
       new(data)
     end
   end
+
+  def self.stores(zip)
+    nearby_stores(zip) << BestbuyService.new(zip).nearby_stores[:total]
+  end
+
 end
